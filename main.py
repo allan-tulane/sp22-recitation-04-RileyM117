@@ -26,47 +26,20 @@ def run_map_reduce(map_f, reduce_f, docs):
     return [reduce_f(g) for g in groups]
 
 def word_count_map(doc):
-  # doc.split
-  # for word in doc.split(): print(word, 1)
-  # x = []
-  # for word in doc.split():
-  #x.append(word,1)
-  #
-    """
-    Params:
-      doc....a string to be split into tokens. split on whitespace.
-    Returns:
-      a list of tuples of form (token, 1), where token is a whitespace delimited element of this string.
-      
-    E.g.
-    >>> word_count_map('i am sam i am')
-    [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
-    """
-    ###TODO
-    
-    
+   doc.split
+   for word in doc.split(): 
+     print(word, 1)
+     x = []
+   for word in doc.split():
+     x.append(word,1)
+   return x
 
 def test_word_count_map():
     assert word_count_map('i am sam i am') == \
            [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
 
 def word_count_reduce(group):
-  #(g[0]),reduce(plus, 0, g[1])
-  
-
-    """
-    Params:
-      group...a tuple of the form (token, list_of_ones), indicating the number of times each word appears.
-    Returns:
-      tuple of form (token, int), where int is the number of times that token appears
-    E.g.
-    >>> word_count_reduce(['i', [1,1]])
-    ('i', 2)
-    
-    NOTE: you should use call the `reduce` function here.
-    """
-    ###TODO
-    
+  (g[0]),reduce(plus, 0, g[1])
     
 def test_word_count_reduce():
     assert word_count_reduce(['i', [1,1,1]]) == ('i', 3)
