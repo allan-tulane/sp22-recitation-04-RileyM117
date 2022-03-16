@@ -35,7 +35,7 @@ To use this function to count words, you'll need to implement your own `map_f` a
 3. If the above are correct, then you should now be able to test it the full solution `test_word_count`
 
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
-
+pytho
 **Enter answer here**
 
 
